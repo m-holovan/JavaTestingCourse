@@ -1,15 +1,29 @@
 import org.testng.annotations.Test;
 import pages.MainPage;
+import utils.DriverManager;
 
 public class MainPageTest {
 
     @Test
-    void testSteps(){
+    void testSteps() {
         MainPage mainPage = new MainPage();
         mainPage.openLoginModal()
-                .verifyLoginModalUiElemetsDisplayed()
+                .verifyLoginModalUiElementsDisplayed()
+                .checkFacebookAndGoogleBtns()
+                .checkLoginAndRegistrationBtns()
                 .inputEmail()
                 .inputPassword()
-                .loginToAcc();
+                .loginToAcc()
+                .checkReCaptchaErrorMessage();
+    }
+
+    @Test
+    void wrongEmailAndPassword() {
+        MainPage mainPage = new MainPage();
+        mainPage.openLoginModal()
+                .inputWrongEmail()
+                .inputWrongPassword()
+                .loginToAcc()
+                .checkErrorMessageEmail();
     }
 }

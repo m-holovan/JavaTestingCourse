@@ -19,4 +19,19 @@ public class MainPageElements extends RozetkaFactory {
 
     @FindBy(css = "button.button.button--large.button--green.auth-modal__submit.ng-star-inserted")
     protected WebElement btnSubmit;
+
+    @FindBy(css = "button.button.button--large.button--gray.button--with-icon.auth-modal__social-button.auth-modal__social-button_type_facebook")
+    protected WebElement btnFacebook;
+
+    @FindBy(css = "button.button.button--large.button--gray.button--with-icon.auth-modal__social-button")
+    protected WebElement btnGoogle;
+
+    @FindBy(css = "button.auth-modal__register-link.button.button--link.ng-star-inserted")
+    protected WebElement btnRegister;
+
+    @FindBy(xpath = "(//p[contains(@class, 'error-message') and contains(@class, 'ng-star-inserted')])[1]")
+    protected WebElement errorEmailMessage;
+
+    @FindBy (xpath = "//*[@class='error-message error-message_color_red']")
+    protected WebElement reCaptchaErrorMessage;
 }

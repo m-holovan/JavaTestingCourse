@@ -13,4 +13,7 @@ public interface DriverConfig extends Config {
     String email();
 
     String password();
+
+    String wrongEmail();
+    String wrongPassword();
 }
