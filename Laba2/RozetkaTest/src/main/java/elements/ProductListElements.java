@@ -22,4 +22,13 @@ public class ProductListElements extends RozetkaFactory {
 
     @FindBy (css = "button.header__button.ng-star-inserted.header__button--active")
     protected WebElement cartButton;
+
+    @FindBy (css = "div.cart-receipt__sum-price")
+    protected WebElement totalPrice;
+
+    @FindBy(css = "button.modal__close")
+    protected WebElement closeCartButton;
+
+    @FindBy(css = "button.search-form__clear")
+    protected WebElement clearSearchFieldButton;
 }

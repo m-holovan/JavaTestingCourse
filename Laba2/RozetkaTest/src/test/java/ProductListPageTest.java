@@ -4,7 +4,7 @@ import pages.ProductListPage;
 public class ProductListPageTest {
 
     @Test
-    void firstTest(){
+    void buyProducts(){
         ProductListPage productListPage = new ProductListPage();
 
         productListPage.inputTextInSearchField();
@@ -12,5 +12,13 @@ public class ProductListPageTest {
         productListPage.addToOrder();
         productListPage.checkIndex();
         productListPage.openCart();
+        productListPage.checkTotalPrice();
+        productListPage.closeCart();
+        productListPage.inputSecondProductInSearchField();
+        productListPage.findProduct();
+        productListPage.addToOrder();
+        productListPage.checkIndex();
+        productListPage.openCart();
+        productListPage.checkTotalPriceOfTwoProducts();
     }
 }
